@@ -1,27 +1,16 @@
 #include <stdlib.h>
-
 #include <string.h>
-
 #include <stdio.h>
-
 #include "lists.h"
 
-
-
 /**
-
  * main - check the code for Holberton School students.
-
- *
-
  * Return: Always 0.
-
  */
 
 int main(void)
 
 {
-
 	listint_t *head;
 
 	listint_t *current;
@@ -29,8 +18,6 @@ int main(void)
 	listint_t *temp;
 
 	int i;
-
-
 
 	head = NULL;
 
@@ -53,7 +40,6 @@ int main(void)
 	print_listint(head);
 
 
-
 	if (check_cycle(head) == 0)
 
 		printf("Linked list has no cycle\n");
@@ -61,8 +47,6 @@ int main(void)
 	else if (check_cycle(head) == 1)
 
 		printf("Linked list has a cycle\n");
-
-
 
 	current = head;
 
@@ -74,8 +58,6 @@ int main(void)
 
 	current->next = head;
 
-
-
 	if (check_cycle(head) == 0)
 
 		printf("Linked list has no cycle\n");
@@ -84,22 +66,13 @@ int main(void)
 
 		printf("Linked list has a cycle\n");
 
-
-
 	current = head;
 
 	for (i = 0; i < 4; i++)
-
 		current = current->next;
 
 	current->next = temp;
-
-
-
 	free_listint(head);
 
-
-
 	return (0);
-
-}clear
+}
